@@ -45,8 +45,13 @@ public class ToJson {
 				str=br.readLine();
 			}
 			str=br.readLine(); 
-			while(!str.startsWith("热度(")||str.equals("转载")){
-				p.getTag().add(str);
+			while(!str.startsWith("热度(")){
+				if(!str.equals("转载")){
+					p.getTag().add(str);
+				}
+				else{
+					break;
+				}
 				br.readLine();  //pass "other:"
 				str=br.readLine();
 			}
@@ -87,7 +92,8 @@ public class ToJson {
 			
 		}
 		br.close();
-		
+		bw.write("[\n");
+		bw.flush();
 		for(int i=0;i<l.size()-1;i++){
 			str=gson.toJson(l.get(i));
 			
@@ -97,7 +103,7 @@ public class ToJson {
 		}
 		str=gson.toJson(l.get(l.size()-1));
 		
-		bw.write(str);
+		bw.write(str+"\n]");
 		bw.flush();
 		bw.close();
 	}
