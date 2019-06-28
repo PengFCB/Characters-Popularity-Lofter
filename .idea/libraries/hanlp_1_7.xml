@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="hanlp-1.7">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/nlp/hanlp-1.7.3-release" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/nlp/hanlp-1.7.3-release" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/nlp/hanlp-1.7.3-release" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/nlp/hanlp-1.7.3-release" recursive="false" type="SOURCES" />
+  </library>
+</component>
