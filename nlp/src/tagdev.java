@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class tagdev {
@@ -59,6 +60,32 @@ public class tagdev {
                     pp.setTag(tag);
                 }
             }
+        }
+    }
+    public void removedup() {
+        List<String> namelist = new ArrayList<String>();
+        List<String>del=new ArrayList<String>();
+        for (hero ho : hh) namelist.addAll(ho.getHero());
+        for (page pp : pg) {
+            List<String> tag = pp.getTag();
+            for(String tags:tag){
+                if(namelist.contains(tags))continue;
+                else del.add(tags);
+            }
+            tag.removeAll(del);
+            pp.setTag(tag);
+            del.clear();
+        }
+        del.clear();
+        for (pagehot pp : pgh) {
+            List<String> tag = pp.getTag();
+            for(String tags:tag){
+                if(namelist.contains(tags))continue;
+                else del.add(tags);
+            }
+            tag.removeAll(del);
+            pp.setTag(tag);
+            del.clear();
         }
     }
 

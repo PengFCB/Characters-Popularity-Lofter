@@ -19,11 +19,17 @@ public class jsonherotag {
             brr= new InputStreamReader(new FileInputStream("dictionary.json"),"UTF-8");
             tg=js.fromJson(brr,tag[].class);
 
-            brr= new InputStreamReader(new FileInputStream("lf20190625_1110.json"),"UTF-8");
+            brr= new InputStreamReader(new FileInputStream("lf20190625_1110_rmdup.json"),"UTF-8");
             pg=js.fromJson(brr,page[].class);
 
             brr= new InputStreamReader(new FileInputStream("lfhot.json"),"UTF-8");
             pgh=js.fromJson(brr,pagehot[].class);
+            for(pagehot ph:pgh){
+                int i=ph.getCommentNum();
+                int a=ph.getHotIndex();
+                a=i*10+a;
+                ph.setHotIndex(a);
+            }
         }
         catch (FileNotFoundException e) {
             e.printStackTrace();
