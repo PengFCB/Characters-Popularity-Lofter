@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Characters-Popularity-Lofter</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">		
+		<link rel='stylesheet' href='css/main.css'>        
+		<link rel='stylesheet' href='css/normalize.min.css'>        
+		<script src='js/vendor/modernizr-2.6.2.min.js'></script>
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 class="title">Characters-Popularity-Lofter</h1>
+                <nav>
+                    <ul>
+                        <li><a href="#0x00">项目简介</a></li>
+                        <li><a href="#0x01">项目使用</a></li>
+                        <li><a href="#0x02">语料库</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+
+                <article>
+                    <header>
+                        <h1>乐乎平台中文作品标签识别和热度统计</h1>
+                        <p>
+							北京工业大学2019年《应用安全课程设计》项目
+							<br />
+							<a href="https://github.com/PengFCB/Characters-Popularity-Lofter">⇨GitHub</a>
+						</p>
+                    </header>
+                    <section id="0x00">
+                        <h2>项目简介</h2>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;LOFTER平台由于作品众多、作者打tag的习惯不同等原因，许多作品缺乏妥善完整的标签分类，导致平台在热度统计上的不准确。为了得出更加全面准确的LOFTER的热度榜统计，我们针对一个主题的作品进行研究，通过python爬虫创建了数据集并设计了该作品专属的语料库及词典，通过智能的关键词识别算法为作品添加标签，提供了一个更加全面的LOFTER热度榜统计系统，避免了因个人打标签习惯差异导致的热度统计不准确。
+						</p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;我们以当下热门手游王者荣耀作为主题标签，采用python爬虫提取了王者荣耀tag下的两类数据集（共计6000余个lof），经过数据集去重、json化等处理后，利用关键词提取技术为数据集中的作品提取出角色名关键词，结合词典为每个作品添加合适的角色标签，依据角色标签的数量、热度对王者荣耀中的各角色进行热度统计，给出手游王者荣耀的角色热度排行榜，并参考官方活动对我们的统计结果加以验证，最终实现了一套完整的乐乎平台热度统计系统。
+						</p>
+						<p style="text-align:center">
+							<img src="./img/background.png" height="350px" />
+						</p>
+						<p>
+							视频展示：
+						</p>
+						<p style="text-align:center">
+							<video width="550px" src="./video/show.mp4" controls></video>
+						</p>
+                    </section>
+                    <section id="0x01">
+                        <h2>项目使用</h2>
+                        <p>
+                        	1. 爬取数据集：
+                        </p>
+						<p>
+							<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								cd crawler
+							</code>
+							<br />
+							<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								python3 ./lf.py
+							</code>
+							<br />
+							<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								python3 ./lfhot.py
+							</code>
+						</p>
+                        <p>
+                        	2. 排行榜：
+                        </p>
+						<p>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							使用任意IDE打开Java源代码直接运行即可。
+						</p>
+						<p>
+							3. 生成语料库：
+						</p>
+						<p>
+							<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								cd corpus/tools/
+							</code>
+							<br />
+							<code>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								python3 ./main.py
+							</code>
+						</p>
+                    </section>
+                    <section id="0x02">
+                        <h2>语料库</h2>
+                        <p>
+							<a href="https://github.com/PengFCB/Characters-Popularity-Lofter/tree/master/corpus">⇨LINK</a>
+						</p>
+						<p style="text-align:center">
+							<img src="./img/corpus_img2.jpg" width="600px" />
+						</p>
+						<p>
+							语料库为2019年7月2日抓取的以下标签内容：
+						</p>
+						<p>
+							王者荣耀，信白，云亮，铠约，双兰，策约，邦良，约策，百里骨科，狄芳，瑜乔，铠宝，备香，策乔，药鱼，邦信，信云，白亮，白信，明弈，白狄，亮瑜，白鹊
+						</p>
+						<p>
+							容量大约为650MB(TXT)/420MB(JSON)
+						</p>
+						<p style="text-align:center">
+							<img src="./img/corpus_img.jpg" width="380px" />
+						</p>
+                    </section>
+                </article>
+
+                <aside>
+                    <h3>项目小组</h3>
+                    <p>
+						LEADER：
+					</p>
+					<p style="text-align:center">
+						<img src="https://avatars2.githubusercontent.com/u/38319361?s=400&v=4" height="100px" />
+					</p>
+					<p style="text-align:center">
+						<a href="https://github.com/Nanami-Mo">Nanami-Mo</a>
+					</p>
+					<p>
+						MEMBERS:
+					</p>
+					<p style="text-align:center">
+						<img src="https://avatars1.githubusercontent.com/u/39000405?s=400&v=4" height="100px" />
+					</p>
+					<p style="text-align:center">
+						<a href="https://github.com/zyc14588">zyc14588</a>
+					</p>
+					<p style="text-align:center">
+						<img src="https://avatars0.githubusercontent.com/u/25549319?s=400&v=4" height="100px" />
+					</p>
+					<p style="text-align:center">
+						<a href="https://github.com/PengFCB">PengFCB</a>
+					</p>
+					<p style="text-align:center">
+						<img src="https://avatars2.githubusercontent.com/u/37476779?s=400&v=4" height="100px" />
+					</p>
+					<p style="text-align:center">
+						<a href="https://github.com/Akiko97">Akiko97</a>
+					</p>
+                </aside>
+			
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <div class="footer-container">
+            <footer class="wrapper">
+                <h3>footer</h3>
+            </footer>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src='js/main.js'></script>
+    </body>
+</html>
