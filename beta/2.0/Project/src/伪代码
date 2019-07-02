@@ -1,0 +1,3 @@
+Main:
+加载lofter.json
+使用GSON依据lofter.json内容生成实例
