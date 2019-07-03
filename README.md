@@ -11,6 +11,8 @@
 * [jcommon](https://github.com/jfree/jcommon)
 * [jfreechart](https://github.com/jfree/jfreechart)
 
+项目展示视频背景音乐《Shadow Of Truth》由[Audionautix](https://audionautix.com)提供
+
 ## 使用
 
 1. 安装依赖：
