@@ -10,16 +10,16 @@ import java.util.Collections;
 import java.util.List;
 
 public class CoupleList {
-    private Couple[] cplist;
+    public Couple[] cplist;
     private Passage[] hotList;
     private Passage[] totalList;
 	private List<Couple> cplistn;
 	private List<Couple> cplisth;
 	private List<Couple> cplistt;
     public CoupleList() throws IOException {
-        BufferedReader br=new BufferedReader(new FileReader("cpdic.json"));
-        BufferedReader br1=new BufferedReader(new FileReader("lfhot.json"));
-        BufferedReader br2=new BufferedReader(new FileReader("lf20190625_1110_rmdup.json"));
+        BufferedReader br=new BufferedReader(new FileReader("json\\cpdic.json"));
+        BufferedReader br1=new BufferedReader(new FileReader("json\\lfhot.json"));
+        BufferedReader br2=new BufferedReader(new FileReader("json\\lf20190625_1110_rmdup.json"));
         
         cplist = new Gson().fromJson(br,Couple[].class);
         hotList=new Gson().fromJson(br1, Passage[].class);
@@ -75,9 +75,9 @@ public class CoupleList {
 		Collections.sort(cplistn);
 	}
 	public void totxt()throws IOException{
-		BufferedWriter bw=new BufferedWriter(new FileWriter("txt/cpHotListRank.txt"));
-		BufferedWriter bw1=new BufferedWriter(new FileWriter("txt/cpTotListRank.txt"));
-		BufferedWriter bw2=new BufferedWriter(new FileWriter("txt/cpRank.txt"));
+		BufferedWriter bw=new BufferedWriter(new FileWriter("txt\\cpHotListRank.txt"));
+		BufferedWriter bw1=new BufferedWriter(new FileWriter("txt\\cpTotListRank.txt"));
+		BufferedWriter bw2=new BufferedWriter(new FileWriter("txt\\cpRank.txt"));
 		for(int i=0;i<cplisth.size();i++){
 			bw.write(cplisth.get(i).getTag()+"\t"+cplisth.get(i).getHotIndex()+"\n");
 			bw.flush();

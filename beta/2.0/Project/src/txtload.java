@@ -8,12 +8,12 @@ public class txtload {
     private BufferedWriter out = null;
     public txtload(){
         try {
-            brr=new BufferedReader(new FileReader("C:\\Users\\zyc14588\\IdeaProjects\\nlp\\test2.txt"));
+            brr=new BufferedReader(new FileReader("C:\\Users\\zyc14588\\IdeaProjects\\nlp\\txt\\test2.txt"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
         try {
-            writeName = new File("C:\\Users\\zyc14588\\IdeaProjects\\nlp\\keyword2.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
+            writeName = new File("C:\\Users\\zyc14588\\IdeaProjects\\nlp\\txt\\keyword2.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
             writeName.createNewFile(); // 创建新文件,有同名的文件的话直接覆盖
             writer = new FileWriter(writeName);
             out= new BufferedWriter(writer);

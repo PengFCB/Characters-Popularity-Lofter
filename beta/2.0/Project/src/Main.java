@@ -7,13 +7,11 @@ import java.util.concurrent.Executors;
 
 public class Main {
        public static void main(String[] args) throws IOException, InterruptedException {
-           load ll=new load();
            final CountDownLatch cdt=new CountDownLatch(2);
            ExecutorService exe= Executors.newFixedThreadPool(2);
            exe.execute(new multtd(cdt,true));
            exe.execute(new multtd(cdt,false));
            cdt.await();
-           ll.progressBar.setValue(100);
            JFrame frame=new JFrame("总榜单");
            frame.setLayout(new GridLayout(2,2,10,10));
            frame.add(new BarChart("txt\\cpRank.txt","CP总榜单").getChartPanel());           //添加柱形图
@@ -43,6 +41,5 @@ public class Main {
            frame2.setBounds(50, 50, 800, 600);
            frame2.setVisible(true);
            frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-           ll.setVisible(false);
        }
 }
