@@ -23,3 +23,9 @@ python3 ./lfhot.py
 cd corpus/tools/ 
 python3 ./main.py
 ```
+
+## Developer
+* [@PengFCB](https://github.com/PengFCB)
+* [@Nanami-Mo](https://github.com/Nanami-Mo)
+* [@Akiko97](https://github.com/Akiko97)
+* [@zyc14588](https://github.com/zyc14588)
