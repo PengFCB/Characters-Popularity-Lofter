@@ -25,13 +25,12 @@ pip3 install bs4 requests pyhanlp
 
 ```shell
 cd crawler 
-python3 ./lf.py 
-python3 ./lfhot.py
+python3 ./crawler.py
 ```
 
 3. 排行榜：
 
-使用任意IDE打开Java源代码直接运行即可。
+直接运行CPL.jar
 
 4. 生成语料库：
 ```
