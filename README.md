@@ -13,6 +13,8 @@
 
 项目展示视频背景音乐《Shadow Of Truth》由[Audionautix](https://audionautix.com)提供
 
+[下载最新版](https://github.com/PengFCB/Characters-Popularity-Lofter/releases/download/rc1.0/rc1.0.zip)
+
 ## 使用
 
 1. 安装依赖：
