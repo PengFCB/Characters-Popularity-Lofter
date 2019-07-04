@@ -132,7 +132,7 @@ public class rank {
         FileWriter writer = null;
         BufferedWriter out = null;
         try {
-            writeName = new File("C:\\Users\\zyc14588\\IdeaProjects\\nlp\\txt\\rank.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
+            writeName = new File("txt/rank.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
             writeName.createNewFile(); // 创建新文件,有同名的文件的话直接覆盖
             writer = new FileWriter(writeName);
             out= new BufferedWriter(writer);
@@ -156,7 +156,7 @@ public class rank {
         FileWriter writer = null;
         BufferedWriter out = null;
         try {
-            writeName = new File("C:\\Users\\zyc14588\\IdeaProjects\\nlp\\txt\\rank_new.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
+            writeName = new File("txt/rank_new.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
             writeName.createNewFile(); // 创建新文件,有同名的文件的话直接覆盖
             writer = new FileWriter(writeName);
             out= new BufferedWriter(writer);
@@ -181,7 +181,7 @@ public class rank {
         FileWriter writer = null;
         BufferedWriter out = null;
         try {
-            writeName = new File("C:\\Users\\zyc14588\\IdeaProjects\\nlp\\txt\\rank_hot.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
+            writeName = new File("txt/rank_hot.txt"); // 相对路径，如果没有则要建立一个新的output.txt文件
             writeName.createNewFile(); // 创建新文件,有同名的文件的话直接覆盖
             writer = new FileWriter(writeName);
             out= new BufferedWriter(writer);

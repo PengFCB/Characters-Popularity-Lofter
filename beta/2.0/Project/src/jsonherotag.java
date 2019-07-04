@@ -25,16 +25,16 @@ public class jsonherotag {
             //writeName.createNewFile();
             //FileWriter writer  = new FileWriter(writeName);
             //BufferedWriter out= new BufferedWriter(writer);
-            brr= new InputStreamReader(new FileInputStream("json\\dic.json"),"UTF-8");
+            brr= new InputStreamReader(new FileInputStream("json/dic.json"),"UTF-8");
             hh=js.fromJson(brr,hero[].class);
 
-            brr= new InputStreamReader(new FileInputStream("json\\dictionary.json"),"UTF-8");
+            brr= new InputStreamReader(new FileInputStream("json/dictionary.json"),"UTF-8");
             tg=js.fromJson(brr,tag[].class);
 
-            brr= new InputStreamReader(new FileInputStream("json\\lofter.json"),"UTF-8");
+            brr= new InputStreamReader(new FileInputStream("json/lofter.json"),"UTF-8");
             pg=js.fromJson(brr,lofter[].class);
 
-            brr= new InputStreamReader(new FileInputStream("json\\lfhot.json"),"UTF-8");
+            brr= new InputStreamReader(new FileInputStream("json/lfhot.json"),"UTF-8");
             pgh=js.fromJson(brr,pagehot[].class);
             for(pagehot ph:pgh){
                 int i=ph.getCommentNum();
