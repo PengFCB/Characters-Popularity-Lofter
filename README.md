@@ -30,7 +30,7 @@ python3 ./crawler.py
 
 3. 排行榜：
 
-直接运行CPL.jar
+   直接运行CPL.jar
 
 4. 生成语料库：
 ```
