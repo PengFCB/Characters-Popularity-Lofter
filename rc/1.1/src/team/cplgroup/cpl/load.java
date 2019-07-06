@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.concurrent.TimeUnit;
 
+@SuppressWarnings("serial")
 public class load extends JFrame {
     public JProgressBar progressBar;
     load(){

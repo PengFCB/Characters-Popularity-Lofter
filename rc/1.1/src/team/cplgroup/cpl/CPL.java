@@ -123,7 +123,8 @@ public class CPL {
     		    // 创建表格中的横标题
     		    String[] Names = { "软件名称", "版本", "是否修改", "许可证类别", "项目主页" };
     		    // 以Names和playerInfo为参数，创建一个表格
-    		    JTable table = new JTable(softwareInfo, Names){
+    		    @SuppressWarnings("serial")
+				JTable table = new JTable(softwareInfo, Names){
     		    	@Override
     		    	 public boolean isCellEditable(int row, int column) {                // 表格不可编辑
     		            return false;

@@ -3,9 +3,10 @@ package team.cplgroup.cpl;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileReader;
+import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
@@ -18,9 +19,9 @@ public class CoupleList {
     private Passage[] totalList;
     
     public CoupleList() throws IOException {
-        BufferedReader br=new BufferedReader(new FileReader("json/cpdic.json"));
-        BufferedReader br1=new BufferedReader(new FileReader("json/lfhot.json"));
-        BufferedReader br2=new BufferedReader(new FileReader("json/lf.json"));
+        BufferedReader br=new BufferedReader(new InputStreamReader(new FileInputStream("json/cpdic.json"),"UTF-8"));
+        BufferedReader br1=new BufferedReader(new InputStreamReader(new FileInputStream("json/lfhot.json"),"UTF-8"));
+        BufferedReader br2=new BufferedReader(new InputStreamReader(new FileInputStream("json/lf.json"),"UTF-8"));
         
         cplist = new Gson().fromJson(br,Couple[].class);
         hotList=new Gson().fromJson(br1, Passage[].class);

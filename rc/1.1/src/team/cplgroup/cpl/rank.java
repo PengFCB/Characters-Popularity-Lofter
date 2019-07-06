@@ -5,9 +5,9 @@ import java.util.*;
 public class rank {
     private lofter[] pg;
     private Passage[]pgh;
-    private TreeMap ranks;
-    private TreeMap ranksh;
-    private TreeMap ranktt;
+    private TreeMap<String, Integer> ranks;
+    private TreeMap<String, Integer> ranksh;
+    private TreeMap<String, Integer> ranktt;
     private List<Map.Entry<String, Integer>> listn = new ArrayList<>();
     private List<Map.Entry<String, Integer>> listh = new ArrayList<>();
     private List<Map.Entry<String, Integer>> listt = new ArrayList<>();
@@ -86,11 +86,11 @@ public class rank {
             }
         });
     }
-    public Map getRanksh() {
+    public Map<String, Integer> getRanksh() {
         return ranksh;
     }
 
-    public Map getRanks() {
+    public Map<String, Integer> getRanks() {
         return ranks;
     }
 
@@ -128,7 +128,6 @@ public class rank {
         }
     }
     public void ranktotxt() throws IOException {
-        BufferedReader brr = null;
         File writeName = null;
         FileWriter writer = null;
         BufferedWriter out = null;
@@ -152,7 +151,6 @@ public class rank {
         }
     }
     public void ranknewtotxt() throws IOException {
-        BufferedReader brr = null;
         File writeName = null;
         FileWriter writer = null;
         BufferedWriter out = null;
@@ -177,7 +175,6 @@ public class rank {
     }
 
     public void rankhottotxt() throws IOException {
-        BufferedReader brr = null;
         File writeName = null;
         FileWriter writer = null;
         BufferedWriter out = null;

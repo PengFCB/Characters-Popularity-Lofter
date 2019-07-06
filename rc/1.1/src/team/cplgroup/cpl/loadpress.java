@@ -3,6 +3,7 @@ package team.cplgroup.cpl;
 import javax.swing.*;
 import java.awt.*;
 
+@SuppressWarnings("serial")
 public class loadpress extends JFrame {
     JTextArea jt;
     JScrollPane js;

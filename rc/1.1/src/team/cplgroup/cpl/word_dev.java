@@ -13,7 +13,6 @@ import java.util.List;
 
 public class word_dev {
     private CRFLexicalAnalyzer analyzer ;
-    private List<String> con=null;
     private String str="";
     private Segment segment;
     public word_dev() throws IOException {
