@@ -11,6 +11,7 @@ public class Copyright extends javax.swing.JFrame {
         initComponents();
         jTextArea1.setEditable(false);
         this.setVisible(true);
+      
     }
 
     /**
