@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -146,12 +147,20 @@ public class CPL {
     	cpyright.addActionListener(new ActionListener(){
     		@Override
     		public void actionPerformed(ActionEvent a){
-    			new Copyright();
+    			new Copyright().pack();
     		}
     	});
     }
 	
        public static void main(String[] args) throws IOException, InterruptedException {
+    	   boolean showWarning=false;
+    	   File f1=new File("data/dictionary/custom/CustomDictionary.txt");
+    	   File f2=new File("data/dictionary/CoreNatureDictionary.txt.bin");
+    	   File f3=new File("data/dictionary/CoreNatureDictionary.txt");
+    	   if(!f1.exists() || !f2.exists() || !f3.exists()){
+    		   System.err.println("Missing Data!!");
+    		   showWarning=true;
+    	   }
     	   
     	   
            final CountDownLatch cdt=new CountDownLatch(2);
@@ -176,6 +185,9 @@ public class CPL {
            frame.setJMenuBar(jMenuBar);
            frame.pack();
            
+           if(showWarning){
+        	   new DataMissingWarning();
+           }
        
            
            
